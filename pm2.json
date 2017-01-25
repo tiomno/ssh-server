@@ -1,0 +1,13 @@
+{
+  "apps": [{
+    "name": "ssh-server",
+    "cwd": "/Users/tiomno/Sites/ssh-server",
+    "script": "./node_modules/.bin/actionhero",
+    "args": "start",
+    "watch": false,
+    "env": {
+      "NODE_ENV": "production",
+      "AUTH_KEYS": "/Users/tiomno/.ssh/authorized_keys"
+    }
+  }]
+}

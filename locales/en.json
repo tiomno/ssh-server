@@ -1,0 +1,14 @@
+{
+	"Node Healthy": "Node Healthy",
+	"file is a required param to send a file": "file is a required param to send a file",
+	"That file is not found": "That file is not found",
+	"unknown action or invalid apiVersion": "unknown action or invalid apiVersion",
+	"%s is a required parameter for this action": "%s is a required parameter for this action",
+	"the server is shutting down": "the server is shutting down",
+	"Unhealthy": "Unhealthy",
+	"Using more than 1MB of RAM/HEAP": "Using more than 1MB of RAM/HEAP",
+	"Healthy": "Healthy",
+	"room does not exist": "room does not exist",
+	"both room and message are required": "both room and message are required",
+	"room exists": "room exists"
+}

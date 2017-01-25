@@ -1,0 +1,8 @@
+--recursive
+--reporter spec
+--timeout 15000
+--ignore-leaks
+--slow 3000
+--globals api,should
+--require test/bootstrap
+test

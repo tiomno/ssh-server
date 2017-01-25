@@ -1,0 +1,36 @@
+{
+  "name": "ssh-server",
+  "version": "1.0.0",
+  "description": "ssh keys manager server",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha --no-colors",
+    "jscs": "jscs --no-colors .",
+    "start": "pm2 start pm2.json",
+    "restart": "pm2 restart pm2.json",
+    "stop": "pm2 stop pm2.json",
+    "delete": "pm2 delete pm2.json",
+    "debug": "./node_modules/.bin/actionhero start --debug"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.dev.zgrp.net:connecdim/ssh-server.git"
+  },
+  "keywords": [
+    "ssh-server",
+    "ssh-keys"
+  ],
+  "author": "Tridonic R&D Australia",
+  "license": "ISC",
+  "dependencies": {
+    "actionhero": "16.0.0",
+    "pty.js": "^0.3.1",
+    "ssh-keygen": "0.4.1"
+  },
+  "devDependencies": {
+    "istanbul": "^0.4.5",
+    "jscs": "^3.0.7",
+    "mocha": "^3.2.0",
+    "should": "^11.1.1"
+  }
+}

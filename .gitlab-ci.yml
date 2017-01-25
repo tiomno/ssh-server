@@ -1,0 +1,31 @@
+stages:
+  - build
+  - test
+  - coverage
+  - deploy
+
+node-dependencies:
+  stage: build
+  script: "npm install"
+  artifacts:
+    paths:
+    - node_modules/
+
+check-js-code-style:
+  stage: test
+  script: "npm run jscs"
+  dependencies:
+    - node-dependencies
+
+get-js-code-coverage:
+  stage: coverage
+  script:
+    - "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha --no-colors"
+  dependencies:
+    - node-dependencies
+
+deploy-dev:
+    stage: deploy
+    only:
+    - master
+    script: "rsync -r . ubuntu@54.77.181.249:/home/ubuntu/ssh-server --exclude '*.git'"

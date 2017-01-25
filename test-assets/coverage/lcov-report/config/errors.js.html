@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for config/errors.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">config/</a> errors.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">25% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>9/36</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">20% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>2/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">20.83% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>5/24</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">25% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>9/36</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+// error messages can be strings of objects
+const util = require('util');
+&nbsp;
+exports['default'] = {
+    errors: function(api) {
+        return {
+            _toExpand: false,
+&nbsp;
+            // ///////////////
+            // SERIALIZERS //
+            // ///////////////
+&nbsp;
+            serializers: {
+                servers: {
+                    web: <span class="fstat-no" title="function not covered" >function(error) {</span>
+<span class="cstat-no" title="statement not covered" >                        if(util.isError(error)) {</span>
+<span class="cstat-no" title="statement not covered" >                            return String(error.message);</span>
+                        } else {
+<span class="cstat-no" title="statement not covered" >                            return error;</span>
+                        }
+                    },
+                    websocket: <span class="fstat-no" title="function not covered" >function(error) {</span>
+<span class="cstat-no" title="statement not covered" >                        if(util.isError(error)) {</span>
+<span class="cstat-no" title="statement not covered" >                            return String(error.message);</span>
+                        } else {
+<span class="cstat-no" title="statement not covered" >                            return error;</span>
+                        }
+                    },
+                    socket: <span class="fstat-no" title="function not covered" >function(error) {</span>
+<span class="cstat-no" title="statement not covered" >                        if(util.isError(error)) {</span>
+<span class="cstat-no" title="statement not covered" >                            return String(error.message);</span>
+                        } else {
+<span class="cstat-no" title="statement not covered" >                            return error;</span>
+                        }
+                    },
+                    specHelper: function(error) {
+                        <span class="missing-if-branch" title="else path not taken" >E</span>if(util.isError(error)) {
+                            return String(error.message);
+                        } else {
+<span class="cstat-no" title="statement not covered" >                            return error;</span>
+                        }
+                    }
+                }
+            },
+&nbsp;
+            // ///////////
+            // ACTIONS //
+            // ///////////
+&nbsp;
+            // When a params for an action is invalid
+            invalidParams: function(data, validationErrors) {
+                <span class="missing-if-branch" title="else path not taken" >E</span>if(validationErrors.length &gt;= 0) {
+                    return validationErrors[0];
+                }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                return 'validation error';</span>
+            },
+&nbsp;
+            // When a required param for an action is not provided
+            missingParams: function(data, missingParams) {
+                return data.connection.localize(['%s is a required parameter for this action', missingParams[0]]);
+            },
+&nbsp;
+            // user requested an unknown action
+            unknownAction: function(data) {
+                return data.connection.localize('unknown action or invalid apiVersion');
+            },
+&nbsp;
+            // action not usable by this client/server type
+            unsupportedServerType: <span class="fstat-no" title="function not covered" >function(data) {</span>
+<span class="cstat-no" title="statement not covered" >                return data.connection.localize(['this action does not support the %s connection type', data.connection.type]);</span>
+            },
+&nbsp;
+            // action failed because server is mid-shutdown
+            serverShuttingDown: <span class="fstat-no" title="function not covered" >function(data) {</span>
+<span class="cstat-no" title="statement not covered" >                return data.connection.localize('the server is shutting down');</span>
+            },
+&nbsp;
+            // action failed because this client already has too many pending actions
+            // limit defined in api.config.general.simultaneousActions
+            tooManyPendingActions: <span class="fstat-no" title="function not covered" >function(data) {</span>
+<span class="cstat-no" title="statement not covered" >                return data.connection.localize('you have too many pending requests');</span>
+            },
+&nbsp;
+            dataLengthTooLarge: <span class="fstat-no" title="function not covered" >function(maxLength, receivedLength) {</span>
+<span class="cstat-no" title="statement not covered" >                return api.i18n.localize(['data length is too big (%u received/%u max)', maxLength, receivedLength]);</span>
+            },
+&nbsp;
+            // ///////////////
+            // FILE SERVER //
+            // ///////////////
+&nbsp;
+            // The body message to accompany 404 (file not found) errors regarding flat files
+            // You may want to load in the content of 404.html or similar
+            fileNotFound: <span class="fstat-no" title="function not covered" >function(connection) {</span>
+<span class="cstat-no" title="statement not covered" >                return connection.localize(['That file is not found']);</span>
+            },
+&nbsp;
+            // user didn't request a file
+            fileNotProvided: <span class="fstat-no" title="function not covered" >function(connection) {</span>
+<span class="cstat-no" title="statement not covered" >                return connection.localize('file is a required param to send a file');</span>
+            },
+&nbsp;
+            // something went wrong trying to read the file
+            fileReadError: <span class="fstat-no" title="function not covered" >function(connection, error) {</span>
+<span class="cstat-no" title="statement not covered" >                return connection.localize(['error reading file: %s', String(error)]);</span>
+            },
+&nbsp;
+            // ///////////////
+            // CONNECTIONS //
+            // ///////////////
+&nbsp;
+            verbNotFound: <span class="fstat-no" title="function not covered" >function(connection, verb) {</span>
+<span class="cstat-no" title="statement not covered" >                return connection.localize(['I do not know know to perform this verb (%s)', verb]);</span>
+            },
+&nbsp;
+            verbNotAllowed: <span class="fstat-no" title="function not covered" >function(connection, verb) {</span>
+<span class="cstat-no" title="statement not covered" >                return connection.localize(['verb not found or not allowed (%s)', verb]);</span>
+            },
+&nbsp;
+            connectionRoomAndMessage: <span class="fstat-no" title="function not covered" >function(connection) {</span>
+<span class="cstat-no" title="statement not covered" >                return connection.localize('both room and message are required');</span>
+            },
+&nbsp;
+            connectionNotInRoom: <span class="fstat-no" title="function not covered" >function(connection, room) {</span>
+<span class="cstat-no" title="statement not covered" >                return connection.localize(['connection not in this room (%s)', room]);</span>
+            },
+&nbsp;
+            connectionAlreadyInRoom: <span class="fstat-no" title="function not covered" >function(connection, room) {</span>
+<span class="cstat-no" title="statement not covered" >                return connection.localize(['connection already in this room (%s)', room]);</span>
+            },
+&nbsp;
+            connectionRoomHasBeenDeleted: <span class="fstat-no" title="function not covered" >function(room) {</span>
+<span class="cstat-no" title="statement not covered" >                return api.i18n.localize('this room has been deleted');</span>
+            },
+&nbsp;
+            connectionRoomNotExist: <span class="fstat-no" title="function not covered" >function(room) {</span>
+<span class="cstat-no" title="statement not covered" >                return api.i18n.localize('room does not exist');</span>
+            },
+&nbsp;
+            connectionRoomExists: <span class="fstat-no" title="function not covered" >function(room) {</span>
+<span class="cstat-no" title="statement not covered" >                return api.i18n.localize('room exists');</span>
+            },
+&nbsp;
+            connectionRoomRequired: <span class="fstat-no" title="function not covered" >function(room) {</span>
+<span class="cstat-no" title="statement not covered" >                return api.i18n.localize('a room is required');</span>
+            }
+&nbsp;
+        }
+    }
+};
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Dec 13 2016 17:16:41 GMT+1100 (AEDT)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
