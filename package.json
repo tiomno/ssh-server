@@ -23,7 +23,7 @@
   "author": "Tridonic R&D Australia",
   "license": "ISC",
   "dependencies": {
-    "actionhero": "16.0.0",
+    "actionhero": "19.0.4",
     "pty.js": "^0.3.1",
     "ssh-keygen": "0.4.1"
   },
